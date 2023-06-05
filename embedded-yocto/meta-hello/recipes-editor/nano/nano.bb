@@ -69,10 +69,10 @@ python do_compile() {
 
 addtask compile before do_build after do_configure
 
-#do_clean[nostamp] = "1"
-#do_clean() {
-#    rm -rf ${WORKDIR/${P}
-#    rm -f ${TMPDIR}/stamps/*
-#}
-# addtask clean
+do_clean[nostamp] = "1"
+do_clean() {
+    rm -rf ${WORKDIR}/${P}
+    rm -f ${TMPDIR}/stamps/*
+}
+addtask clean
 
